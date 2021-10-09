@@ -1,1 +1,2 @@
 from _ft_contribution import GradientBoostingRegressor
+from _load_concrete import load_concrete
