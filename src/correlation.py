@@ -41,7 +41,7 @@ def correlation(X: np.array, y: np.array, column: int, feature_names: list,
     for z in range(levels):
         reg = GradientBoostingRegressor(random_state=z, n_estimators=10)
         reg.fit(X_train, y_train)
-        media, residuos, explanations = reg.decision_path(X_test)
+        _, residuos, explanations = reg.decision_path(X_test)
 
         cols = [i[0] if i else None for i in explanations]
         for sample_residuos in residuos:

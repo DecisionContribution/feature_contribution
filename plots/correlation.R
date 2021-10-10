@@ -56,8 +56,8 @@ plot <- function(data, title, subtitle, legend, filename) {
 
 files <- list.files(path = "data/output", pattern = 'correlation', full.names = TRUE)
 cols <- c('age', 'bmi')
-title <- c('Contribution of original and correlated features', 
-           'Contribution of original and correlated features')
+title <- c('Concrete data: Contribution of features', 
+           'Diabetes data: Contribution of features')
 subtitle <- c('Behaviour of feature AGE and the new feature correlated to it',
               'Behaviour of feature BMI and the new feature correlated to it')
 legend <- c('Age', 'BMI')
