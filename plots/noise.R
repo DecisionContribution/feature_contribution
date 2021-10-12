@@ -11,9 +11,9 @@ library(hrbrthemes)
 # neutral #C8C8C8]
 
 import_roboto_condensed()
-new_theme <- theme_ipsum_rc(base_size = 15, plot_title_size = 21,
-                            plot_title_margin = 13, subtitle_size = 15,
-                            axis_title_size = 12)
+new_theme <- theme_ipsum_rc(base_size = 20, plot_title_size = 26,
+                            plot_title_margin = 15, subtitle_size = 20,
+                            axis_title_size = 15)
 theme_set(new_theme)
 
 
@@ -49,8 +49,8 @@ plot <- function(data, order_cols, title, subtitle, legend, filename) {
 files <- list.files(path = "data/output", pattern = 'noise', full.names = TRUE)
 cols <- c('age', 'bmi')
 order_cols <- c("Noise %0", "Noise %100", "Noise %200", "Noise %300", "Noise %400")
-title <- c('Contribution of features', 
-           'Contribution of features')
+title <- c('Concrete dataset: Contribution of features', 
+           'Diabetes dataset: Contribution of features')
 subtitle <- c('Adding noise to feature AGE',
               'Adding noise to feature BMI')
 legend <- c('Age', 'BMI')

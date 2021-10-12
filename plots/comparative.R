@@ -11,9 +11,9 @@ library(hrbrthemes)
 # neutral #C8C8C8]
 
 import_roboto_condensed()
-new_theme <- theme_ipsum_rc(base_size = 15, plot_title_size = 21,
-                            plot_title_margin = 13, subtitle_size = 15,
-                            axis_title_size = 12)
+new_theme <- theme_ipsum_rc(base_size = 20, plot_title_size = 26,
+                            plot_title_margin = 15, subtitle_size = 20,
+                            axis_title_size = 15)
 theme_set(new_theme)
 
 
@@ -49,7 +49,8 @@ plot <- function(df, title, subtitle, legend, filename) {
 
 
 files <- list.files(path = "data/output", pattern = 'comparative', full.names = TRUE)
-title <- c('Contribution explanation of three algoritms')
+title <- c('Concrete dataset: Contribution explanation of three algoritms',
+           'Diabetes dataset: Contribution explanation of three algoritms')
 subtitle <- c('Comparative of contribution mean across test dataset')
 legend <- c('Method')
 filename <- c('comparative_concrete.png', 'comparative_diabetes.png')
@@ -57,6 +58,6 @@ filename <- c('comparative_concrete.png', 'comparative_diabetes.png')
 
 for (i in c(1, 2)) {
   df <- data(files[i])
-  plot(df, title, subtitle, legend, filename[i])
+  plot(df, title[i], subtitle, legend, filename[i])
 }
 

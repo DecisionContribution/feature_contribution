@@ -20,7 +20,7 @@ def outlier(X: np.array, y: np.array, feature_names: list, name: str):
     print("Creating synthetic outlier")
 
     X_outlier = np.mean(X_train, axis=0).reshape((1, -1))
-    X_outlier[0 ,1]=np.max(X_train[:, 1]) + np.std(X_train[:, 1])
+    X_outlier[0, 1] = np.max(X_train[:, 1]) + np.std(X_train[:, 1])
     y_outlier = [np.max(y) + np.std(y)]
 
     X_train = np.vstack((X_train, X_outlier))

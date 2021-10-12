@@ -11,9 +11,9 @@ library(hrbrthemes)
 # neutral #C8C8C8]
 
 import_roboto_condensed()
-new_theme <- theme_ipsum_rc(base_size = 15, plot_title_size = 21,
-                            plot_title_margin = 13, subtitle_size = 15,
-                            axis_title_size = 12)
+new_theme <- theme_ipsum_rc(base_size = 20, plot_title_size = 26,
+                            plot_title_margin = 15, subtitle_size = 20,
+                            axis_title_size = 15)
 theme_set(new_theme)
 
 
@@ -47,14 +47,15 @@ plot <- function(df, title, subtitle, legend, filename) {
 
 
 files <- list.files(path = "data/output", pattern = 'outlier', full.names = TRUE)
-title <- c('Contribution in outlier observation')
-subtitle <- c('Shap and Feature contribution comparative')
+title <- c('Concrete dataset: Contribution in outlier observation',
+           'Diabetes dataset: Contribution in outlier observation')
+subtitle <- c('SHAP and Feature contribution comparative')
 legend <- c('Method')
 filename <- c('outlier_concrete.png', 'outlier_diabetes.png')
 
 
 for (i in c(1, 2)) {
   df <- data(files[i])
-  plot(df, title, subtitle, legend, filename[i])
+  plot(df, title[i], subtitle, legend, filename[i])
 }
 
