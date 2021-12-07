@@ -11,9 +11,9 @@ library(hrbrthemes)
 # neutral #C8C8C8]
 
 import_roboto_condensed()
-new_theme <- theme_ipsum_rc(base_size = 20, plot_title_size = 26,
-                            plot_title_margin = 15, subtitle_size = 20,
-                            axis_title_size = 15)
+new_theme <- theme_ipsum_rc(base_size = 30, plot_title_size = 36,
+                            plot_title_margin = 25, subtitle_size = 30,
+                            axis_title_size = 25)
 theme_set(new_theme)
 
 
@@ -43,7 +43,7 @@ plot <- function(df, title, subtitle, legend, filename) {
           axis.text.x = element_text(angle = 45, hjust = 1))
   
   ggsave(paste0('data/figures/', filename), device = "png", dpi = 320, 
-         width = 40, height = 15, units = "cm")
+         width = 40, height = 25, units = "cm")
   
 }
 
